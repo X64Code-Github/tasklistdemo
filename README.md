@@ -1,30 +1,75 @@
-<p align="center"><a href="https://x64code.com" target="_blank"><img src="https://github.com/X64Code-Github/x64code/blob/master/public/dark_logo.png?raw=true" width="400" alt="X64 Code Logo"></a></p>
+<p align="center"><a href="https://x64code.com" target="_blank"><img src="https://github.com/X64Code-Github/X64Code-Github/blob/master/logos/grey_trans.png?raw=true" width="200" alt="X64Code Logo"></a></p>
+<h1 align="center">Task List Demo</p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Table of Contents
 
-## About Laravel
+- [Application Setup](#application-setup)
+- [Usage Documentation](#usage-documentation)
+- [Composer Package Information](#composer-package-information)
+- [NPM Package Information](#npm-package-information)
+- [Bug & Vulnerability Reports](#bug--vulnerability-reports)
+- [License](#license)
+- [Developed By X64Code](#developed-by-x64code)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Application Setup
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- [Automated App Setup (Linux Only)](#automated-app-setup-linux-only)
+- [Manual App Setup](#manual-app-setup)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Automated App Setup (Linux Only)
 
-## Learning Laravel
+Setup can be automated via the setup.sh script I included in the base directory.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+	cd /path/to/project
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Script assumes you're using a local MySQL server. env can be: prod, test, dev (default).
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+	./setup.sh [env]
+
+The script runs `composer install`, `npm install`, `npm run build`. If you have yet to create your .env file, this will copy the example based on the env arg sent in to .env and create an APP_KEY. Your app should be ready to serve.
+
+### Manual App Setup
+
+Go to your project directory.
+
+	cd /path/to/project
+
+Install packages necessary to run project.
+
+	composer install
+	npm install
+
+Build your files & serve
+
+	npm run (build|dev|watch)
+
+## Usage Documentation
+
+
+
+## Composer Package Information
+
+- laravel/laravel 				V10.22.0 - [Documentation](https://laravel.com/docs/10.x)
+- livewire/livewire 			V3.0.2 - [Documentation](https://livewire.laravel.com/docs/quickstart)
+- robsontenorio/mary 			V0.36.0 - [Documentation](https://mary-ui.com/docs/installation)
+- laravel/breeze 				V1.23.0 - [Documentation](https://laravel.com/docs/10.x/starter-kits#laravel-breeze)
+- pestphp/pest-plugin-laravel	V2.0 - [Documentation](https://pestphp.com/)
+
+## NPM Package Information
+
+- tailwindcss	V3.1.0 - [Documentation](https://tailwindcss.com/docs)
+- alpinejs		V3.4.2 - [Documentation](https://alpinejs.dev/start-here)
+
+## Bug & Vulnerability Reports
+
+If you discover any bugs or vulnerabilities, please email [bugreports@x64code.com](mailto:bugreports@x64code.com). Vulnerabilities will be dealt with as soon as possible.
+
+## License
+
+This Task List Demo App is open-sourced software licensed under the [MIT License](https://opensource.org/license/mit/).
+
+## Developed By X64Code
+
+For more information on my other projects, check out my [github](https://github.com/X64Code-Github) or email [projects@x64code.com](mailto:projects@x64code.com) for more information on this or other projects.
+
+Feel free to check out my [portfolio](https://x64code.com) or email your work proposal to [contact@x64code.com](mailto:contact@x64code.com).
