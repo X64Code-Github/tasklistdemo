@@ -26,7 +26,7 @@ Script assumes you're using a local MySQL server. env can be: prod, test, dev (d
 
 	./setup.sh [env]
 
-The script runs `composer install`, `npm install`, `npm run build`. If you have yet to create your .env file, this will copy the example based on the env arg sent in to .env and create an APP_KEY. Your app should be ready to serve.
+The script runs `composer install`, `npm install`, `npm run build`, `php artisan migrate:fresh`. If you have yet to create your .env file, this will copy the example based on the env arg sent in to .env and create an APP_KEY. Your app should be ready to serve.
 
 ### Manual App Setup
 
@@ -43,15 +43,32 @@ Build your files & serve
 
 	npm run (build|dev|watch)
 
+Run your migrations
+
+	php artisan migrate:fresh
+
 ## Usage Documentation
 
+This is a multi-user application so you first need to register your user (No email verification required).
 
+Head to /register in your app and register.
+
+You should be redirected automatically to your Task list. If not, simply go to: /tasklist
+
+Here you can create new Tasks & Projects.
+
+You'll first need to create a new Project as Tasks require a Project to point to. This is done by filling in the text box on the top right of the Task List and clicking "Add New Project".
+
+Once you have a Project, you can now create new Tasks by filling in the top left input with the Task Name and the dropdown selecting the Project the Task belongs to. Finalize by clicking "Add New Task".
+
+You're now ready to use the Task list to reorder Tasks via drag and drop and removing Tasks or Projects via the red trash button.
+
+Deletes are cascading so deleting a Project will delete any subsequent Tasks associated.
 
 ## Composer Package Information
 
 - laravel/laravel 				V10.22.0 - [Documentation](https://laravel.com/docs/10.x)
 - livewire/livewire 			V3.0.2 - [Documentation](https://livewire.laravel.com/docs/quickstart)
-- robsontenorio/mary 			V0.36.0 - [Documentation](https://mary-ui.com/docs/installation)
 - laravel/breeze 				V1.23.0 - [Documentation](https://laravel.com/docs/10.x/starter-kits#laravel-breeze)
 - pestphp/pest-plugin-laravel	V2.0 - [Documentation](https://pestphp.com/)
 

@@ -86,4 +86,9 @@ npm run build
 echo "Built frontend assets."
 echo "---------------------------------------------"
 
+# Migrate database structure
+php artisan migrate:fresh
+echo "Migrated database structure."
+echo "---------------------------------------------"
+
 echo "Task List Demo Setup Complete."
